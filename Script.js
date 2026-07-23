@@ -223,3 +223,65 @@ el.style.transition=".8s";
 observer.observe(el);
 
 });
+
+/*==========================
+PREMIUM EFFECTS
+==========================*/
+
+const glow=document.createElement("div");
+
+glow.className="cursor-glow";
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+const particleContainer=document.createElement("div");
+
+particleContainer.className="particles";
+
+document.body.appendChild(particleContainer);
+
+for(let i=0;i<40;i++){
+
+const p=document.createElement("span");
+
+p.className="particle";
+
+p.style.left=Math.random()*100+"%";
+
+p.style.animationDuration=8+Math.random()*12+"s";
+
+p.style.animationDelay=Math.random()*8+"s";
+
+particleContainer.appendChild(p);
+
+}
+
+const reveal=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(sec=>{
+
+sec.classList.add("hidden");
+
+reveal.observe(sec);
+
+});
