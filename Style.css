@@ -1,4 +1,4 @@
-/* ===========================
+9/* ===========================
 HERO SECTION
 =========================== */
 
@@ -2800,6 +2800,90 @@ SMOOTH SELECTION
 background:#FFD700;
 
 color:#111;
+
+}
+
+/*======================================
+DEMO ORDER
+======================================*/
+
+.demo-order{
+
+padding:120px 8%;
+
+}
+
+.demo-container{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+}
+
+.menu-card,
+
+.receipt-card{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,215,0,.15);
+
+border-radius:24px;
+
+padding:35px;
+
+backdrop-filter:blur(18px);
+
+}
+
+.food-item,
+
+.receipt-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.food-item h4{
+
+margin-bottom:5px;
+
+}
+
+.food-item small{
+
+color:#bdbdbd;
+
+}
+
+.total{
+
+font-size:22px;
+
+color:#FFD700;
+
+margin:20px 0;
+
+}
+
+@media(max-width:900px){
+
+.demo-container{
+
+grid-template-columns:1fr;
+
+}
 
 }
 
