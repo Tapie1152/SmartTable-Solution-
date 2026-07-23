@@ -1,4 +1,4 @@
-9/* ===========================
+/* ===========================
 HERO SECTION
 =========================== */
 
@@ -2887,3 +2887,79 @@ grid-template-columns:1fr;
 
 }
 
+
+/*======================================
+SMART ECOSYSTEM
+======================================*/
+
+.ecosystem{
+
+padding:120px 8%;
+
+}
+
+.eco-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:70px;
+
+}
+
+.eco-box{
+
+padding:40px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,215,0,.12);
+
+border-radius:24px;
+
+text-align:center;
+
+transition:.4s;
+
+backdrop-filter:blur(20px);
+
+}
+
+.eco-box:hover{
+
+transform:translateY(-15px);
+
+border-color:#FFD700;
+
+box-shadow:0 0 40px rgba(255,215,0,.18);
+
+}
+
+.eco-box i{
+
+font-size:48px;
+
+color:#FFD700;
+
+margin-bottom:25px;
+
+}
+
+.eco-box h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+}
+
+.eco-box p{
+
+line-height:1.8;
+
+color:#bdbdbd;
+
+}
