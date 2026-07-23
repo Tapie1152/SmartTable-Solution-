@@ -2963,3 +2963,79 @@ line-height:1.8;
 color:#bdbdbd;
 
 }
+
+/*==============================
+VISION
+==============================*/
+
+.vision{
+
+padding:120px 8%;
+
+}
+
+.vision-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+.vision-card{
+
+padding:40px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,215,0,.15);
+
+border-radius:25px;
+
+text-align:center;
+
+transition:.4s;
+
+backdrop-filter:blur(18px);
+
+}
+
+.vision-card:hover{
+
+transform:translateY(-12px);
+
+border-color:#FFD700;
+
+box-shadow:0 0 35px rgba(255,215,0,.2);
+
+}
+
+.vision-card i{
+
+font-size:50px;
+
+color:#FFD700;
+
+margin-bottom:25px;
+
+}
+
+.vision-card h3{
+
+font-size:28px;
+
+margin-bottom:18px;
+
+}
+
+.vision-card p{
+
+color:#bdbdbd;
+
+line-height:1.8;
+
+}
