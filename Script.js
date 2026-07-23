@@ -285,3 +285,280 @@ sec.classList.add("hidden");
 reveal.observe(sec);
 
 });
+
+/*======================================
+SMARTTABLE SOLUTION PREMIUM EFFECTS
+======================================*/
+
+// Active Navigation
+
+const sections=document.querySelectorAll("section");
+const navLinks=document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top=section.offsetTop-150;
+
+const height=section.offsetHeight;
+
+if(pageYOffset>=top){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+// Demo Button
+
+const demoButtons=document.querySelectorAll(".project-btn,.gold-btn");
+
+demoButtons.forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+alert("🚀 SmartTable Solution Demo Coming Soon!");
+
+});
+
+});
+
+// AI WhatsApp Transfer
+
+document.querySelectorAll(".chat-btn").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+window.open("https://wa.me/27638725468","_blank");
+
+});
+
+});
+
+// Floating Logo Animation
+
+const logo=document.querySelector(".logo");
+
+setInterval(()=>{
+
+if(logo){
+
+logo.animate([
+
+{transform:"translateY(0px)"},
+
+{transform:"translateY(-4px)"},
+
+{transform:"translateY(0px)"}
+
+],{
+
+duration:2500
+
+});
+
+}
+
+},2600);
+
+// Random Glow
+
+setInterval(()=>{
+
+document.querySelectorAll(".tech-card,.project-card,.vision-card").forEach(card=>{
+
+card.style.boxShadow="0 0 "+(20+Math.random()*25)+"px rgba(255,215,0,.18)";
+
+});
+
+},3000);
+
+/*======================================
+SMARTTABLE AI CHAT
+======================================*/
+
+const aiMessages=[
+
+"👋 Welcome to SmartTable Solution.",
+
+"📱 Scan the QR code to browse the menu.",
+
+"⚡ Wireless charging is available on compatible devices.",
+
+"🤖 Need more help? I'll connect you to WhatsApp."
+
+];
+
+const aiBox=document.querySelector(".chat-message");
+
+let msg=0;
+
+function rotateAI(){
+
+if(!aiBox) return;
+
+aiBox.style.opacity="0";
+
+setTimeout(()=>{
+
+aiBox.innerHTML=aiMessages[msg];
+
+aiBox.style.opacity="1";
+
+msg++;
+
+if(msg>=aiMessages.length){
+
+msg=0;
+
+}
+
+},500);
+
+}
+
+setInterval(rotateAI,5000);
+
+/*======================================
+BATTERY PERCENTAGE
+======================================*/
+
+const battery=document.querySelector(".battery-fill");
+
+let charge=20;
+
+setInterval(()=>{
+
+if(!battery) return;
+
+charge++;
+
+battery.style.width=charge+"%";
+
+if(charge>=100){
+
+charge=20;
+
+}
+
+},120);
+
+/*======================================
+ORDER BUTTON
+======================================*/
+
+const order=document.querySelector(".order-btn");
+
+if(order){
+
+order.addEventListener("click",()=>{
+
+order.innerHTML="✔ Order Received";
+
+order.style.background="#16a34a";
+
+setTimeout(()=>{
+
+order.innerHTML="Order Now";
+
+order.style.background="";
+
+},3000);
+
+});
+
+}
+
+/*======================================
+CONTACT FORM
+======================================*/
+
+const form=document.querySelector("form");
+
+if(form){
+
+form.addEventListener("submit",(e)=>{
+
+e.preventDefault();
+
+alert("✅ Thank you! We'll contact you shortly.");
+
+form.reset();
+
+});
+
+}
+
+/*======================================
+PHONE ROTATION
+======================================*/
+
+const phone=document.querySelector(".phone-card");
+
+if(phone){
+
+document.addEventListener("mousemove",(e)=>{
+
+const x=(window.innerWidth/2-e.clientX)/45;
+
+const y=(window.innerHeight/2-e.clientY)/45;
+
+phone.style.transform=`rotateY(${x}deg) rotateX(${-y}deg)`;
+
+});
+
+}
+
+/*======================================
+YEAR
+======================================*/
+
+const year=document.querySelector("#year");
+
+if(year){
+
+year.innerHTML=new Date().getFullYear();
+
+}
