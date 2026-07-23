@@ -3409,3 +3409,131 @@ font-weight:700;
 transform:rotate(45deg);
 
   }
+
+/*======================================
+WIRELESS CHARGING
+======================================*/
+
+.charging{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+padding:120px 8%;
+
+}
+
+.charging-list{
+
+margin:35px 0;
+
+}
+
+.charging-list li{
+
+margin:18px 0;
+
+font-size:18px;
+
+color:#ddd;
+
+list-style:none;
+
+}
+
+.phone-demo{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.phone-demo img{
+
+width:300px;
+
+animation:floatPhone 4s ease-in-out infinite;
+
+z-index:2;
+
+}
+
+.pulse-ring{
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+border:2px solid rgba(255,215,0,.6);
+
+border-radius:50%;
+
+animation:pulseRing 2.5s infinite;
+
+}
+
+.delay{
+
+animation-delay:1.2s;
+
+}
+
+@keyframes pulseRing{
+
+0%{
+
+transform:scale(.8);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(1.6);
+
+opacity:0;
+
+}
+
+}
+
+@keyframes floatPhone{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.charging{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+}
