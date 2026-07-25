@@ -3635,3 +3635,65 @@ color:#FFD700;
 margin-bottom:10px;
 
 }
+
+/*================ CTA ================*/
+
+.cta{
+
+padding:120px 8%;
+
+}
+
+.cta-box{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:70px 50px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:linear-gradient(135deg,#0d0d0d,#1b1b1b);
+
+border:1px solid rgba(255,215,0,.18);
+
+box-shadow:0 0 40px rgba(255,215,0,.15);
+
+}
+
+.cta-box h2{
+
+font-size:48px;
+
+margin-bottom:20px;
+
+color:#FFD700;
+
+}
+
+.cta-box p{
+
+max-width:700px;
+
+margin:0 auto 40px;
+
+line-height:1.9;
+
+color:#cfcfcf;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
