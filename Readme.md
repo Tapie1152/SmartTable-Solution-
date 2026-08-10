@@ -1,4 +1,4 @@
-# 🟡 SmartTable Solution
+#  SmartTable Solution
 
 ### **Making the table smarter — one scan, one charge, one order at a time.**
 
@@ -8,14 +8,14 @@ SmartTable Solution is a concept and interactive web prototype designed to explo
 
 The idea combines:
 
-- 📱 QR-code digital ordering
-- 🍽️ Interactive digital menus
-- 🔋 Wireless phone charging
-- 🤖 AI-powered customer assistance
-- 🧾 Digital order receipts
-- 📊 Business dashboards and analytics
-- 🏨 Smart hospitality technology
-- 🔗 Connected customer experiences
+-  QR-code digital ordering
+-  Interactive digital menus
+-  Wireless phone charging
+-  AI-powered customer assistance
+-  Digital order receipts
+-  Business dashboards and analytics
+-  Smart hospitality technology
+-  Connected customer experiences
 
 ---
 
@@ -29,7 +29,7 @@ You can view the current prototype here:
 
 ---
 
-# 💡 What is SmartTable Solution?
+#  What is SmartTable Solution?
 
 Imagine sitting at a restaurant table.
 
@@ -45,7 +45,7 @@ You receive a digital receipt.
 
 And while you're waiting...
 
-**your phone can charge directly from the table. 🔋**
+**your phone can charge directly from the table. **
 
 That's the concept behind SmartTable Solution.
 
@@ -55,17 +55,17 @@ The goal is to create a more connected experience between:
 
 ---
 
-# 🚀 Current Prototype Features
+#  Current Prototype Features
 
-### 📱 QR Ordering
+###  QR Ordering
 
 Customers can scan a table QR code and access the digital ordering experience.
 
-### 🍽️ Digital Menu
+###  Digital Menu
 
 Interactive menu interface designed for restaurants, cafés and hospitality businesses.
 
-### 🛒 Ordering Demo
+###  Ordering Demo
 
 The prototype allows users to:
 
@@ -76,7 +76,7 @@ The prototype allows users to:
 - Place a demo order
 - Generate a digital receipt
 
-### 🧾 Digital Receipt
+###  Digital Receipt
 
 The ordering prototype includes a receipt interface containing:
 
@@ -87,11 +87,11 @@ The ordering prototype includes a receipt interface containing:
 - Order status
 - Barcode concept
 
-### 🔋 Wireless Charging
+###  Wireless Charging
 
 SmartTable Solution also explores integrating wireless charging directly into tables, allowing compatible smartphones to charge without requiring a traditional charging cable.
 
-### 🤖 AI Assistant
+###  AI Assistant
 
 An AI-style customer assistance interface is being developed to help visitors with questions about:
 
@@ -101,7 +101,7 @@ An AI-style customer assistance interface is being developed to help visitors wi
 - Restaurant information
 - Customer assistance
 
-### 📊 Business Dashboard
+###  Business Dashboard
 
 The project also explores business-side functionality such as:
 
@@ -113,7 +113,7 @@ The project also explores business-side functionality such as:
 
 ---
 
-# 🏗️ Project Status
+#  Project Status
 
 **Status: 🚧 Active Development**
 
@@ -133,7 +133,7 @@ So if you discover a button that does absolutely nothing...
 
 ---
 
-# 🛠️ Technologies
+#  Technologies
 
 The current prototype is being developed using web technologies including:
 
@@ -147,21 +147,21 @@ Additional technologies and backend services may be introduced as the project ev
 
 ---
 
-# 📱 Mobile First
+#  Mobile First
 
 SmartTable Solution is being developed with mobile users in mind.
 
 The long-term goal is to provide a smooth experience across:
 
-- 📱 Android
-- 🍎 iPhone / iOS
-- 💻 Desktop
-- 📲 Tablets
-- 🌐 Modern mobile browsers
+-  Android
+-  iPhone / iOS
+-  Desktop
+-  Tablets
+-  Modern mobile browsers
 
 ---
 
-# 🎯 Vision
+#  Vision
 
 SmartTable Solution isn't just about replacing a paper menu.
 
@@ -183,7 +183,7 @@ Future possibilities may include:
 
 ---
 
-# 🧪 Why I'm Building This
+#  Why I'm Building This
 
 This project is also a practical development experiment.
 
@@ -204,7 +204,7 @@ The project will continue evolving as new ideas and technologies are explored.
 
 ---
 
-# 🗺️ Roadmap
+#  Roadmap
 
 ### Phase 1 — Prototype
 - [x] Website
@@ -267,7 +267,7 @@ And if you find something broken...
 
 ---
 
-# 🤝 Feedback & Collaboration
+#  Feedback & Collaboration
 
 SmartTable Solution is still evolving.
 
@@ -287,7 +287,7 @@ The project is intended to demonstrate concepts, user interfaces and potential f
 
 ---
 
-# 📜 License
+#  License
 
 This project is currently under development.
 
@@ -301,4 +301,4 @@ Consider giving the project a ⭐ on GitHub and following the development.
 
 **Smart tables. Smarter experiences.**
 
-### — SmartTable Solution 🟡
+### — SmartTable Solution 
