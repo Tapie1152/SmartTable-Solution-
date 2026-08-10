@@ -785,42 +785,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* =========================================================
-   SMARTTABLE QR CODE
-========================================================= */
-
-const qrContainer = document.getElementById("demoQR");
-
-if (qrContainer) {
-
-    const orderingURL =
-        window.location.origin +
-        window.location.pathname +
-        "#ordering-demo";
-
-    const qrScript = document.createElement("script");
-
-    qrScript.src =
-        "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
-
-    qrScript.onload = () => {
-
-        qrContainer.innerHTML = "";
-
-        new QRCode(qrContainer, {
-            text: orderingURL,
-            width: 170,
-            height: 170,
-            colorDark: "#111111",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-
-    };
-
-    document.head.appendChild(qrScript);
-
-   }
 
 /*======================================
 CONTACT FORM
