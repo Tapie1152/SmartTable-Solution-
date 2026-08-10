@@ -526,23 +526,389 @@ Customers simply scan the SmartTable QR code to browse digital menus, order food
 
 </div>
 
-<div>
+<!-- ================= SMARTTABLE ORDERING DEMO ================= -->
 
-<i class="fa-solid fa-check"></i>
+<section class="ordering-demo" id="ordering-demo">
 
-<span>Secure QR Technology</span>
+    <div class="section-heading">
 
-</div>
+        <span class="gold-label">LIVE DEMO</span>
 
-</div>
+        <h2>Experience SmartTable Ordering</h2>
 
-</div>
+        <p>
+            Scan the table QR code, browse the menu, place an order
+            and receive your digital receipt.
+        </p>
 
-</section>
+    </div>
 
+
+    <div class="ordering-wrapper">
+
+        <!-- QR TABLE CARD -->
+
+        <div class="qr-demo-card">
+
+            <div class="table-number">
+                TABLE <span>#08</span>
+            </div>
+
+            <div class="qr-frame">
+
+                <div id="demoQR"></div>
+
+            </div>
+
+            <h3>Scan To Order</h3>
+
+            <p>
+                Scan the QR code with your phone camera
+                to open the SmartTable menu.
+            </p>
+
+            <div class="scan-status">
+
+                <span class="status-dot"></span>
+
+                Table Online
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <div class="menu-demo">
+
+            <div class="menu-header">
+
+                <div>
+
+                    <span class="gold-label">TABLE #08</span>
+
+                    <h3>SmartTable Menu</h3>
+
+                </div>
+
+                <div class="cart-indicator">
+
+                    🛒
+
+                    <span id="cartCount">0</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENU ITEMS -->
+
+            <div class="menu-items">
+
+
+                <div class="menu-item">
+
+                    <div class="food-placeholder">
+
+                        🍔
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <h4>Classic Burger</h4>
+
+                        <p>Beef patty, cheese, lettuce & sauce</p>
+
+                        <strong>R85</strong>
+
+                    </div>
+
+                    <button
+                        class="add-food"
+                        data-name="Classic Burger"
+                        data-price="85">
+
+                        +
+
+                    </button>
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <div class="food-placeholder">
+
+                        🍕
+                        
+                    </div>
+
+                    <div class="food-info">
+
+                        <h4>Premium Pizza</h4>
+
+                        <p>Fresh mozzarella, tomato & herbs</p>
+
+                        <strong>R110</strong>
+
+                    </div>
+
+                    <button
+                        class="add-food"
+                        data-name="Premium Pizza"
+                        data-price="110">
+
+                        +
+
+                    </button>
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <div class="food-placeholder">
+
+                        🍗
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <h4>Chicken Wings</h4>
+
+                        <p>Golden crispy wings with house sauce</p>
+
+                        <strong>R75</strong>
+
+                    </div>
+
+                    <button
+                        class="add-food"
+                        data-name="Chicken Wings"
+                        data-price="75">
+
+                        +
+
+                    </button>
+
+                </div>
+
+
+                <div class="menu-item">
+
+                    <div class="food-placeholder">
+
+                        🥤
+
+                    </div>
+
+                    <div class="food-info">
+
+                        <h4>Cold Drink</h4>
+
+                        <p>Refreshing chilled soft drink</p>
+
+                        <strong>R25</strong>
+
+                    </div>
+
+                    <button
+                        class="add-food"
+                        data-name="Cold Drink"
+                        data-price="25">
+
+                        +
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CART -->
+
+            <div class="demo-cart" id="demoCart">
+
+                <div class="cart-top">
+
+                    <h3>Your Order</h3>
+
+                    <span id="cartItemsText">
+                        No items
+                    </span>
+
+                </div>
+
+                <div id="cartItems">
+
+                    <p class="empty-cart">
+                        Add an item to start your order.
+                    </p>
+
+                </div>
+
+
+                <div class="cart-total">
+
+                    <span>Total</span>
+
+                    <strong id="cartTotal">
+                        R0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="place-order-btn"
+                    id="placeOrderBtn">
+
+                    Place Demo Order
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RECEIPT MODAL -->
+
+    <div
+        class="receipt-overlay"
+        id="receiptOverlay">
+
+        <div class="receipt">
+
+            <button
+                class="close-receipt"
+                id="closeReceipt">
+
+                ×
+
+            </button>
+
+
+            <div class="receipt-logo">
+
+                <div class="receipt-icon">
+                    ST
+                </div>
+
+                <h3>SmartTable</h3>
+
+                <span>SMART HOSPITALITY</span>
+
+            </div>
+
+
+            <div class="receipt-success">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h2>Order Confirmed</h2>
+
+                <p>
+                    Your order has been successfully received.
+                </p>
+
+            </div>
+
+
+            <div class="receipt-details">
+
+                <div>
+
+                    <span>Order</span>
+
+                    <strong id="receiptOrderNumber">
+                        #ST0001
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>Table</span>
+
+                    <strong>#08</strong>
+
+                </div>
+
+                <div>
+
+                    <span>Status</span>
+
+                    <strong class="receipt-status">
+                        Preparing
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="receipt-items"
+                id="receiptItems">
+
+            </div>
+
+
+            <div class="receipt-total">
+
+                <span>Total</span>
+
+                <strong id="receiptTotal">
+                    R0
+                </strong>
+
+            </div>
+
+
+            <div class="receipt-barcode">
+
+                <div class="barcode-lines"></div>
+
+                <span id="receiptCode">
+                    ST0001
+                </span>
+
+            </div>
+
+
+            <p class="receipt-footer">
+
+                Thank you for using SmartTable Solution.
+
+            </p>
+
+
+            <button
+                class="receipt-done"
+                id="receiptDone">
+
+                Done
+
+            </button>
+
+        </div>
+
+    </div>
+
+                  </section>
+  
 <!-- ================= AI SUPPORT ================= -->
 
-<section class="ai-support" id="ai">
 
 <div class="ai-info">
 
