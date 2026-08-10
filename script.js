@@ -485,31 +485,305 @@ charge=20;
 
 },120);
 
-/*======================================
-ORDER BUTTON
-======================================*/
+/* =========================================================
+   SMARTTABLE ORDERING DEMO
+========================================================= */
 
-const order=document.querySelector(".order-btn");
+document.addEventListener("DOMContentLoaded", () => {
 
-if(order){
+    const cart = [];
 
-order.addEventListener("click",()=>{
+    const cartCount = document.getElementById("cartCount");
+    const cartItems = document.getElementById("cartItems");
+    const cartItemsText = document.getElementById("cartItemsText");
+    const cartTotal = document.getElementById("cartTotal");
 
-order.innerHTML="✔ Order Received";
+    const placeOrderBtn = document.getElementById("placeOrderBtn");
 
-order.style.background="#16a34a";
+    const receiptOverlay = document.getElementById("receiptOverlay");
+    const receiptItems = document.getElementById("receiptItems");
+    const receiptTotal = document.getElementById("receiptTotal");
+    const receiptOrderNumber = document.getElementById("receiptOrderNumber");
+    const receiptCode = document.getElementById("receiptCode");
 
-setTimeout(()=>{
+    const closeReceipt = document.getElementById("closeReceipt");
+    const receiptDone = document.getElementById("receiptDone");
 
-order.innerHTML="Order Now";
 
-order.style.background="";
+    /* =====================================================
+       ADD ITEMS
+    ===================================================== */
 
-},3000);
+    document.querySelectorAll(".add-food").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const name = button.dataset.name;
+            const price = Number(button.dataset.price);
+
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+
+                existingItem.quantity++;
+
+            } else {
+
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+
+            }
+
+            updateCart();
+
+        });
+
+    });
+
+
+    /* =====================================================
+       UPDATE CART
+    ===================================================== */
+
+    function updateCart(){
+
+        cartItems.innerHTML = "";
+
+        if(cart.length === 0){
+
+            cartItems.innerHTML = `
+                <p class="empty-cart">
+                    Add an item to start your order.
+                </p>
+            `;
+
+        } else {
+
+            cart.forEach((item, index) => {
+
+                const row = document.createElement("div");
+
+                row.className = "cart-row";
+
+                row.innerHTML = `
+
+                    <div class="cart-row-info">
+
+                        <strong>
+                            ${item.name}
+                        </strong>
+
+                        <span>
+                            R${item.price} × ${item.quantity}
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="remove-item"
+                        data-index="${index}">
+
+                        ×
+
+                    </button>
+
+                `;
+
+                cartItems.appendChild(row);
+
+            });
+
+        }
+
+
+        const totalQuantity = cart.reduce(
+            (total, item) => total + item.quantity,
+            0
+        );
+
+        const totalPrice = cart.reduce(
+            (total, item) =>
+                total + (item.price * item.quantity),
+            0
+        );
+
+
+        cartCount.textContent = totalQuantity;
+
+        cartItemsText.textContent =
+            totalQuantity === 0
+                ? "No items"
+                : `${totalQuantity} item${totalQuantity > 1 ? "s" : ""}`;
+
+
+        cartTotal.textContent = `R${totalPrice}`;
+
+
+        /* REMOVE ITEM */
+
+        document.querySelectorAll(".remove-item").forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const index = Number(button.dataset.index);
+
+                if(cart[index].quantity > 1){
+
+                    cart[index].quantity--;
+
+                } else {
+
+                    cart.splice(index, 1);
+
+                }
+
+                updateCart();
+
+            });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       PLACE ORDER
+    ===================================================== */
+
+    placeOrderBtn.addEventListener("click", () => {
+
+        if(cart.length === 0){
+
+            alert("Please add at least one item to your order.");
+
+            return;
+
+        }
+
+
+        const orderNumber =
+            "ST" +
+            Math.floor(1000 + Math.random() * 9000);
+
+
+        const totalPrice = cart.reduce(
+            (total, item) =>
+                total + (item.price * item.quantity),
+            0
+        );
+
+
+        /* RECEIPT ITEMS */
+
+        receiptItems.innerHTML = "";
+
+
+        cart.forEach(item => {
+
+            const receiptItem =
+                document.createElement("div");
+
+            receiptItem.className = "receipt-item";
+
+            receiptItem.innerHTML = `
+
+                <span>
+                    ${item.name} × ${item.quantity}
+                </span>
+
+                <strong>
+                    R${item.price * item.quantity}
+                </strong>
+
+            `;
+
+            receiptItems.appendChild(receiptItem);
+
+        });
+
+
+        /* RECEIPT INFORMATION */
+
+        receiptTotal.textContent =
+            `R${totalPrice}`;
+
+        receiptOrderNumber.textContent =
+            `#${orderNumber}`;
+
+        receiptCode.textContent =
+            orderNumber;
+
+
+        /* SHOW RECEIPT */
+
+        receiptOverlay.classList.add("active");
+
+    });
+
+
+    /* =====================================================
+       CLOSE RECEIPT
+    ===================================================== */
+
+    function closeReceiptWindow(){
+
+        receiptOverlay.classList.remove("active");
+
+    }
+
+
+    closeReceipt.addEventListener(
+        "click",
+        closeReceiptWindow
+    );
+
+
+    receiptDone.addEventListener(
+        "click",
+        closeReceiptWindow
+    );
+
+
+    /* =====================================================
+       CLICK OUTSIDE RECEIPT
+    ===================================================== */
+
+    receiptOverlay.addEventListener("click", event => {
+
+        if(event.target === receiptOverlay){
+
+            closeReceiptWindow();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       ESC KEY
+    ===================================================== */
+
+    document.addEventListener("keydown", event => {
+
+        if(event.key === "Escape"){
+
+            closeReceiptWindow();
+
+        }
+
+    });
+
+
+    /* =====================================================
+       INITIAL CART
+    ===================================================== */
+
+    updateCart();
 
 });
-
-}
 
 /*======================================
 CONTACT FORM
