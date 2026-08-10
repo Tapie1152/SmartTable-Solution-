@@ -80,6 +80,31 @@ font-weight:800;
 
 margin-bottom:25px;
 
+color:#ffffff;
+
+}
+
+.hero-left h1 span{
+
+background:linear-gradient(
+90deg,
+#FFD700,
+#fff3b0,
+#FFD700
+);
+
+background-size:200% auto;
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+animation:goldShine 4s linear infinite;
+
+}  
+
 }
 
 .logo-text h2{
