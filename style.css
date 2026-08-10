@@ -3384,7 +3384,9 @@ transform:scale(1.06);
 
 }
 
-.badge{
+/* PRICING POPULAR BADGE */
+
+.price-card .badge{
 
 position:absolute;
 
@@ -3402,7 +3404,7 @@ font-weight:700;
 
 transform:rotate(45deg);
 
-  }
+}
 
 /*======================================
 WIRELESS CHARGING
