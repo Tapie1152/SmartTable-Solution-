@@ -509,6 +509,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeReceipt = document.getElementById("closeReceipt");
     const receiptDone = document.getElementById("receiptDone");
 
+   /* Receipt starts CLOSED */
+if(receiptOverlay){
+    receiptOverlay.classList.remove("active");
+    receiptOverlay.style.display = "none";
+}
+
 
     /* =====================================================
        ADD ITEMS
