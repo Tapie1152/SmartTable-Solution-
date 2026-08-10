@@ -5005,3 +5005,21 @@ text-shadow:
     }
 
   }
+
+/* =========================================================
+   RECEIPT MUST START HIDDEN
+========================================================= */
+
+.receipt-overlay{
+    display:none !important;
+    visibility:hidden;
+    opacity:0;
+    pointer-events:none;
+}
+
+.receipt-overlay.active{
+    display:flex !important;
+    visibility:visible;
+    opacity:1;
+    pointer-events:auto;
+}
