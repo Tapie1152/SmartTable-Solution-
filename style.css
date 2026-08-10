@@ -4333,3 +4333,668 @@ text-shadow:
 }
 
   }
+
+/* =========================================================
+   SMARTTABLE — ORDERING DEMO
+========================================================= */
+
+.ordering-demo{
+    padding:140px 8%;
+    position:relative;
+}
+
+.section-heading{
+    max-width:800px;
+    margin:0 auto 70px;
+    text-align:center;
+}
+
+.section-heading h2{
+    font-size:clamp(38px,5vw,64px);
+    line-height:1.1;
+    margin:18px 0;
+    color:#fff;
+}
+
+.section-heading p{
+    color:#a9a9a9;
+    font-size:17px;
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   MAIN DEMO
+========================================================= */
+
+.ordering-wrapper{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:330px 1fr;
+    gap:35px;
+    align-items:start;
+}
+
+
+/* =========================================================
+   QR CARD
+========================================================= */
+
+.qr-demo-card{
+    padding:35px 25px;
+    text-align:center;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,215,0,.18);
+    border-radius:28px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.table-number{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#999;
+    margin-bottom:25px;
+}
+
+.table-number span{
+    color:#FFD700;
+}
+
+.qr-frame{
+    width:210px;
+    height:210px;
+    margin:0 auto 25px;
+    padding:15px;
+    background:#fff;
+    border-radius:18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#demoQR{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#demoQR img,
+#demoQR canvas{
+    max-width:100%;
+    max-height:100%;
+}
+
+.qr-demo-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.qr-demo-card > p{
+    color:#999;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.scan-status{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:20px;
+    padding:8px 14px;
+    border-radius:50px;
+    background:rgba(34,197,94,.08);
+    border:1px solid rgba(34,197,94,.2);
+    color:#7ee2a0;
+    font-size:13px;
+}
+
+.status-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#22c55e;
+    box-shadow:0 0 10px #22c55e;
+}
+
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu-demo{
+    min-width:0;
+    padding:35px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,215,0,.16);
+    border-radius:28px;
+    backdrop-filter:blur(20px);
+}
+
+.menu-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:25px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.menu-header h3{
+    font-size:30px;
+    margin-top:10px;
+}
+
+.cart-indicator{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    background:rgba(255,215,0,.08);
+    border:1px solid rgba(255,215,0,.2);
+}
+
+.cart-indicator span{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    min-width:20px;
+    height:20px;
+    padding:0 5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#FFD700;
+    color:#111;
+    font-size:11px;
+    font-weight:800;
+}
+
+
+/* =========================================================
+   MENU ITEMS
+========================================================= */
+
+.menu-items{
+    display:grid;
+    gap:15px;
+    margin:25px 0;
+}
+
+.menu-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px;
+    border-radius:18px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.06);
+    transition:.3s ease;
+}
+
+.menu-item:hover{
+    transform:translateX(5px);
+    border-color:rgba(255,215,0,.3);
+    background:rgba(255,215,0,.035);
+}
+
+.food-placeholder{
+    width:70px;
+    height:70px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:16px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,215,0,.12),
+        rgba(255,255,255,.03)
+    );
+    font-size:34px;
+}
+
+.food-info{
+    flex:1;
+}
+
+.food-info h4{
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.food-info p{
+    color:#888;
+    font-size:13px;
+    line-height:1.5;
+    margin-bottom:8px;
+}
+
+.food-info strong{
+    color:#FFD700;
+}
+
+.add-food{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:#FFD700;
+    color:#111;
+    font-size:25px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.add-food:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px rgba(255,215,0,.4);
+}
+
+
+/* =========================================================
+   CART
+========================================================= */
+
+.demo-cart{
+    margin-top:30px;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(0,0,0,.22);
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.cart-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.cart-top h3{
+    font-size:20px;
+}
+
+#cartItemsText{
+    color:#888;
+    font-size:13px;
+}
+
+.empty-cart{
+    padding:20px 0;
+    text-align:center;
+    color:#777;
+}
+
+.cart-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.cart-row-info strong{
+    display:block;
+    font-size:14px;
+}
+
+.cart-row-info span{
+    color:#FFD700;
+    font-size:13px;
+}
+
+.remove-item{
+    border:none;
+    background:transparent;
+    color:#777;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.remove-item:hover{
+    color:#ff6b6b;
+}
+
+.cart-total{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.cart-total span{
+    color:#aaa;
+}
+
+.cart-total strong{
+    font-size:25px;
+    color:#FFD700;
+}
+
+.place-order-btn{
+    width:100%;
+    margin-top:25px;
+    padding:17px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#FFD700,#B8860B);
+    color:#111;
+    font-weight:800;
+    font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.place-order-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 30px rgba(255,215,0,.2);
+}
+
+
+/* =========================================================
+   RECEIPT OVERLAY
+========================================================= */
+
+.receipt-overlay{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(12px);
+}
+
+.receipt-overlay.active{
+    display:flex;
+}
+
+.receipt{
+    width:min(430px,100%);
+    max-height:90vh;
+    overflow-y:auto;
+    position:relative;
+    padding:35px;
+    border-radius:28px;
+    background:#101010;
+    border:1px solid rgba(255,215,0,.25);
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.7),
+        0 0 50px rgba(255,215,0,.08);
+    animation:receiptIn .4s ease;
+}
+
+@keyframes receiptIn{
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.96);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.close-receipt{
+    position:absolute;
+    top:15px;
+    right:18px;
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.06);
+    color:#aaa;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.close-receipt:hover{
+    color:#fff;
+}
+
+
+/* =========================================================
+   RECEIPT CONTENT
+========================================================= */
+
+.receipt-logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.receipt-icon{
+    width:48px;
+    height:48px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:14px;
+    background:linear-gradient(135deg,#FFD700,#B8860B);
+    color:#111;
+    font-weight:900;
+}
+
+.receipt-logo h3{
+    margin-top:10px;
+}
+
+.receipt-logo span{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#777;
+}
+
+.receipt-success{
+    text-align:center;
+    padding:20px 0;
+}
+
+.success-icon{
+    width:60px;
+    height:60px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(34,197,94,.1);
+    border:1px solid rgba(34,197,94,.3);
+    color:#4ade80;
+    font-size:30px;
+}
+
+.receipt-success h2{
+    margin:15px 0 8px;
+}
+
+.receipt-success p{
+    color:#888;
+    font-size:13px;
+}
+
+.receipt-details{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    padding:18px 0;
+    border-top:1px dashed rgba(255,255,255,.12);
+    border-bottom:1px dashed rgba(255,255,255,.12);
+}
+
+.receipt-details div{
+    text-align:center;
+}
+
+.receipt-details span{
+    display:block;
+    color:#777;
+    font-size:10px;
+    margin-bottom:5px;
+}
+
+.receipt-details strong{
+    font-size:12px;
+}
+
+.receipt-status{
+    color:#FFD700;
+}
+
+.receipt-items{
+    padding:20px 0;
+}
+
+.receipt-item{
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0;
+    color:#bbb;
+    font-size:14px;
+}
+
+.receipt-total{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    font-size:18px;
+}
+
+.receipt-total strong{
+    color:#FFD700;
+    font-size:25px;
+}
+
+
+/* =========================================================
+   BARCODE
+========================================================= */
+
+.receipt-barcode{
+    text-align:center;
+    padding:20px 0;
+}
+
+.barcode-lines{
+    width:180px;
+    height:55px;
+    margin:auto;
+    background:repeating-linear-gradient(
+        90deg,
+        #fff 0px,
+        #fff 2px,
+        transparent 2px,
+        transparent 5px,
+        #fff 5px,
+        #fff 6px,
+        transparent 6px,
+        transparent 9px
+    );
+}
+
+.receipt-barcode span{
+    display:block;
+    margin-top:8px;
+    color:#777;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.receipt-footer{
+    text-align:center;
+    color:#666;
+    font-size:11px;
+    line-height:1.6;
+}
+
+.receipt-done{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#FFD700;
+    color:#111;
+    font-weight:800;
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
+
+    .ordering-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .qr-demo-card{
+        max-width:430px;
+        width:100%;
+        margin:auto;
+    }
+
+}
+
+@media(max-width:600px){
+
+    .ordering-demo{
+        padding:90px 5%;
+    }
+
+    .menu-demo{
+        padding:20px;
+    }
+
+    .menu-header h3{
+        font-size:24px;
+    }
+
+    .menu-item{
+        padding:14px;
+        gap:12px;
+    }
+
+    .food-placeholder{
+        width:55px;
+        height:55px;
+        font-size:26px;
+    }
+
+    .food-info h4{
+        font-size:15px;
+    }
+
+    .food-info p{
+        font-size:11px;
+    }
+
+    .add-food{
+        width:38px;
+        height:38px;
+        font-size:21px;
+    }
+
+    .receipt{
+        padding:28px 20px;
+    }
+
+  }
