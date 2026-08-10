@@ -4703,19 +4703,26 @@ text-shadow:
 
 
 /* =========================================================
-   RECEIPT OVERLAY
+   RECEIPT OVERLAY — NO PAGE BLUR
 ========================================================= */
 
 .receipt-overlay{
     position:fixed;
     inset:0;
     z-index:99999;
+
     display:none;
+
     align-items:center;
     justify-content:center;
+
     padding:20px;
-    background:rgba(0,0,0,.82);
-    backdrop-filter:blur(12px);
+
+    background:rgba(0,0,0,.68);
+
+    /* IMPORTANT: do not blur the website behind the receipt */
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
 }
 
 .receipt-overlay.active{
