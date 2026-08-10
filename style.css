@@ -1,29 +1,30 @@
-/* ===========================
-HERO SECTION
-=========================== */
+/* ================= HERO HEADING ================= */
 
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:140px 8% 80px;
-
-gap:80px;
-
+.hero-left h1 {
+    font-size: clamp(46px, 6vw, 82px);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #ffffff;
+    margin: 20px 0 25px;
+    position: relative;
+    z-index: 5;
 }
 
-.hero-left{
+.hero-left h1 span {
+    color: #FFD700;
+    -webkit-text-fill-color: #FFD700;
+    text-shadow:
+        0 0 15px rgba(255, 215, 0, 0.35),
+        0 0 35px rgba(255, 215, 0, 0.15);
+}
 
-flex:1;
-
-animation:heroFade 1.2s ease;
-
+/* Prevent animations from making the heading disappear */
+.hero-left h1,
+.hero-left h1 span {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
 }
 
 /* HERO BADGE */
@@ -5022,4 +5023,21 @@ text-shadow:
     visibility:visible;
     opacity:1;
     pointer-events:auto;
+}
+
+/* ================= HERO MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hero-left h1 {
+        font-size: clamp(42px, 12vw, 58px);
+        line-height: 1.08;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    .hero-left h1 span {
+        display: inline;
+    }
+
 }
